@@ -1,12 +1,13 @@
 package test;
 
 import java.util.List;
+
 import org.junit.Test;
 import org.junit.runner.RunWith;
+import org.quan.service.TestService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
-import com.konka.service.TestService;
 
 @RunWith(SpringJUnit4ClassRunner.class)  //使用junit4进行测试  
 @ContextConfiguration({"classpath:spring.xml","classpath:spring-mybatis.xml"}) //加载配置文件   
@@ -24,9 +25,9 @@ public class SpringJunit4Test{
 	public void doTest(){
 		System.out.println("测试开始====================================");
 		
-		com.konka.model.Test test = new com.konka.model.Test();
+		org.quan.model.Test test = new org.quan.model.Test();
 		test.setName("test");
-		List<com.konka.model.Test> list = testService.query(test);
+		List<org.quan.model.Test> list = testService.query(test);
 		System.out.println("测试查询：" + list.toString());
 		
 		test.setName("测试！！！！！！！！！！！");
