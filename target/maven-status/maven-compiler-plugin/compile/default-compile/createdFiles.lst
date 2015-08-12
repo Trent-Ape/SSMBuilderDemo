@@ -1,0 +1,5 @@
+com\konka\service\TestService.class
+com\konka\controller\TestController.class
+com\konka\dao\TestDao.class
+com\konka\model\Test.class
+com\konka\service\impl\TestServiceImpl.class
